@@ -2,7 +2,7 @@ Appointment Scheduler
 -------------
 *Appointment Scheduler created for WGU's Software II course.*
 
-<img src="appt.png" width="800" height="400">
+<img src="appt.png" width="750" height="375">
 <meta 
   property=”og:title”
   content=”Java Appointment Scheduler” 

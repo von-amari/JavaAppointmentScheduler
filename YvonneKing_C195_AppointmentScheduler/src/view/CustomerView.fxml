@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="5.0" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerController">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="89.59997558593749" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="422.40000000000003" minWidth="900.0" prefWidth="750.0" />
+      <ColumnConstraints maxWidth="422.40000000000003" minWidth="200.0" prefWidth="150.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints prefHeight="100.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TableView fx:id="customerTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="900.0" style=": ;" stylesheets="@../Main/myFXSyles.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn fx:id="customerIdCol" prefWidth="41.60003662109375" sortable="false" text="ID" />
+          <TableColumn fx:id="customerNameCol" prefWidth="144.79999923706055" text="Name" />
+            <TableColumn fx:id="customerAddressCol" prefWidth="239.20001220703125" text="Address" />
+            <TableColumn fx:id="customerPostalCodeCol" prefWidth="90.39993286132812" text="Postal Code" />
+            <TableColumn fx:id="customerPhoneCol" prefWidth="107.199951171875" text="Phone Number" />
+            <TableColumn fx:id="customerCountryCol" prefWidth="141.5999755859375" text="Country" />
+            <TableColumn fx:id="customerDivisionCol" prefWidth="130.400146484375" text="Division" />
+        </columns>
+      </TableView>
+      <HBox fx:id="hboxTitle" prefHeight="100.0" prefWidth="1082.0" style="-fx-background-color: #748386;" GridPane.columnIndex="1">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="712.0" text="Customers" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </Label>
+         </children></HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="addBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionAddCustomer" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #9DC7C8;" text="Add" textFill="WHITE">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets bottom="20.0" />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifyBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionModifyCustomer" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #9DC7C8;" text="Modify" textFill="WHITE">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="20.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionDeleteCustomer" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #9DC7C8;" text="Delete" textFill="WHITE">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="20.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="homeBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionGoHome" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #9DC7C8;" text="Back" textFill="WHITE">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="20.0" />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

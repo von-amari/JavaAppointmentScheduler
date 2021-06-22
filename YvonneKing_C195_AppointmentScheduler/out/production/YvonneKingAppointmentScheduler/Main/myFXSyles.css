@@ -1,0 +1,57 @@
+
+
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.column-header{
+-fx-background-color: #748386;
+-fx-text-fill: #ffffff;
+}
+
+/*all columns one color
+.table-column{
+-fx-background-color: silver;
+}
+*/
+.table-view{
+-fx-border-color:  #748386;
+}
+
+/*
+.table-column#wednesday{
+-fx-background-color: silver;
+}
+
+.table-column#friday{
+-fx-background-color: #7748386;
+}
+*/
+
+/* cell height
+.table-row-cell {
+-fx-cell-size: 100;
+}
+*/
+
+.table-row-cell:selected .text {
+       -fx-fill: red ;
+}
+.table-row-cell:selected {
+        -fx-selection-bar: white;
+}
+
+
+/*even odd cells */
+.table-row-cell: odd{
+  -fx-background-color: rgba(116, 131, 134, 0.20);
+  /*-fx-background-color: #ffffff; */
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell: even{
+  /*  -fx-background-color: #E9F1F7; */
+    -fx-background-color: #ffffff;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}

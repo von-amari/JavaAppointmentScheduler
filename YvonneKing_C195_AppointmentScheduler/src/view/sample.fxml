@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="5.0" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="79.0" minWidth="72.5999755859375" prefWidth="73.2" />
+      <ColumnConstraints maxWidth="89.59997558593749" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="422.40000000000003" minWidth="755.0" prefWidth="750.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints prefHeight="100.0" />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TableView fx:id="dateTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="758.0" stylesheets="@../Main/myFXSyles.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="45.600006103515625" sortable="false" text="ID" />
+          <TableColumn id="days" fx:id="nameCol" prefWidth="169.60000610351562" text="Title" />
+            <TableColumn fx:id="wednesday" prefWidth="181.60000610351562" text="Description" />
+            <TableColumn id="days" prefWidth="132.00006103515625" text="Start Time" />
+            <TableColumn fx:id="friday" prefWidth="135.20001220703125" text="End Time" />
+            <TableColumn fx:id="friday1" prefWidth="91.20001220703125" text="Customer ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="button" mnemonicParsing="false" onAction="#show" text="Button" />
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #706563;" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets top="25.0" />
+         </GridPane.margin>
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="74.0" text="7:00" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="74.0" text="7:00" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="74.0" text="7:00" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="74.0" text="7:00" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="74.0" text="7:00" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="24.0" prefWidth="74.0" text="7:00" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox fx:id="hboxTitle" prefHeight="90.0" prefWidth="755.0" style="-fx-background-color: #748386;" GridPane.columnIndex="2" />
+   </children>
+</GridPane>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="5.0" prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="89.59997558593749" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="422.40000000000003" minWidth="1082.0" prefWidth="750.0" />
+      <ColumnConstraints maxWidth="422.40000000000003" minWidth="200.0" prefWidth="150.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints prefHeight="100.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TableView fx:id="dateTable" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="1083.0" style="-fx-selection-bar: green;" stylesheets="@../Main/myFXSyles.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <columns>
+          <TableColumn fx:id="apptIdCol" prefWidth="41.60003662109375" sortable="false" text="ID" />
+          <TableColumn fx:id="titleCol" prefWidth="112.79998397827148" text="Title" />
+            <TableColumn fx:id="descriptionCol" prefWidth="179.99998474121094" text="Description" />
+            <TableColumn fx:id="locationCol" prefWidth="145.59994506835938" text="Location" />
+            <TableColumn fx:id="typeCol" prefWidth="120.79998779296875" text="Appt Type" />
+            <TableColumn fx:id="dateCol" prefWidth="107.199951171875" text="Date" />
+            <TableColumn fx:id="startTimeCol" prefWidth="82.4000244140625" text="Start Time" />
+            <TableColumn fx:id="endTimeCol" prefWidth="88.0" text="End Time" />
+            <TableColumn fx:id="custIdCol" prefWidth="64.800048828125" text="Customer" />
+            <TableColumn fx:id="contactCol" prefWidth="145.60009765625" text="Contact" />
+            <TableColumn fx:id="userCol" minWidth="0.0" prefWidth="0.0" text="User" />
+        </columns>
+      </TableView>
+      <HBox fx:id="hboxTitle" prefHeight="100.0" prefWidth="1082.0" style="-fx-background-color: #748386;" GridPane.columnIndex="1">
+         <children>
+            <Label prefHeight="100.0" prefWidth="712.0" text="Appointments" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </Label>
+            <HBox fx:id="hboxTitle1" prefHeight="100.0" prefWidth="1083.0" style="-fx-background-color: #748386;">
+               <children>
+                  <ComboBox fx:id="monthApptDropDown" editable="true" onAction="#onActionMonthDisplay" prefHeight="26.0" prefWidth="159.0" promptText="Month">
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" top="42.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <RadioButton fx:id="weekRadioBtn" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionWeekDisplay" prefWidth="140.0" text="Next 7 Days" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="10.0" top="45.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="apptView" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="allRadioBtn" alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#onActionAllDisplay" prefHeight="18.0" prefWidth="120.0" text="All " textFill="WHITE" toggleGroup="$apptView">
+                     <HBox.margin>
+                        <Insets left="10.0" top="45.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <Label fx:id="reportBtn" prefHeight="100.0" prefWidth="308.0">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children></HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="customerButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionCustomerView" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #9DC7C8;" text="Customer" textFill="WHITE">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets bottom="20.0" />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="addApptBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionAddAppt" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #9DC7C8;" text="Add Appointment" textFill="WHITE">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="20.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="modApptBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionModAppt" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #9DC7C8;" text="Modify Appointment" textFill="WHITE">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="20.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteApptBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionDeleteAppt" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #9DC7C8;" text="Cancel Appointment" textFill="WHITE">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="20.0" />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="reportsBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionReports" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #9DC7C8;" text="Reports" textFill="WHITE">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+               <opaqueInsets>
+                  <Insets bottom="20.0" />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="logoutBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionLogout" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #9DC7C8;" text="Log Out" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets bottom="20.0" />
+               </opaqueInsets>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
